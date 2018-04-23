@@ -1,8 +1,9 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 
-var orm = require('./config/orm.js');
+var burgers = require('./models/burger.js');
 
 //orm.insertOne('burgers',['burger_name','devoured'],['Royale with Cheese',false])
 //orm.selectAll('burgers');
-orm.updateOne('burgers','burger_name','BLT','id',1);
+//orm.updateOne('burgers','devoured',true,'id',1);
+//burgers.viewBurgers(function(res) {console.log(res)});
