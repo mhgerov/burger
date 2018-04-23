@@ -1,3 +1,5 @@
+console.log('Running connection.js');
+
 require("dotenv").config();
 var mysql = require("mysql");
 
@@ -10,11 +12,11 @@ var connection = mysql.createConnection({
 
 connection.connect(function(err) {
 	console.log(process.env.DB_HOST);
-  if (err) {
-    console.error("error connecting: " + err.stack);
-    return;
-  }
-  console.log("connected as id " + connection.threadId);
+	if (err) {
+		console.error("error connecting: " + err.stack);
+		return;
+	}
+	console.log("connected as id " + connection.threadId);
 });
 
 module.exports = connection;
