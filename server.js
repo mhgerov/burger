@@ -1,2 +1,4 @@
 var express = require('express');
-var body-parser = require('body-parser');
+var bodyParser = require('body-parser');
+
+var connection = require('./config/connection.js');
