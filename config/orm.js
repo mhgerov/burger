@@ -18,7 +18,13 @@ var orm = {
 			console.log('Insertion successful');
 		});
 	},
-	updateOne: function () {
+	updateOne: function (table,attr,val,idAttr,idVal) {
+		var queryString = 'UPDATE ?? SET ?? = ? WHERE ??=?';
+		var query = connection.query(queryString, [table,attr,val,idAttr,idVal], function(err, result) {
+			console.log(query.sql);
+			if (err) throw err;
+			console.log('Update successful');
+		});
 	}
 }
 
