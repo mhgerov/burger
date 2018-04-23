@@ -10,20 +10,18 @@ var orm = {
 			cb(result);
 		});
 	},
-	insertOne: function(table, columns,values) {
+	insertOne: function(table, columns,values,cb) {
 		var queryString = "INSERT INTO ?? (??) VALUES (?)";
 		var query = connection.query(queryString, [table,columns,values], function(err, result) {
-			console.log(query.sql);
 			if (err) throw err;
-			console.log('Insertion successful');
+			cb();
 		});
 	},
-	updateOne: function (table,attr,val,idAttr,idVal) {
+	updateOne: function (table,attr,val,idAttr,idVal,cb) {
 		var queryString = 'UPDATE ?? SET ?? = ? WHERE ??=?';
 		var query = connection.query(queryString, [table,attr,val,idAttr,idVal], function(err, result) {
-			console.log(query.sql);
 			if (err) throw err;
-			console.log('Update successful');
+			cb();
 		});
 	}
 }
