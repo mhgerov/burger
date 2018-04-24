@@ -8,8 +8,53 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+<link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.0/united/bootstrap.min.css" rel="stylesheet" integrity="sha384-h1Za54CnmmJzf7NmR8Ztwc+1fpFNNmt0Q9iprQpdKcF4JOjN2PeNFFzFuqBxrEL2" crossorigin="anonymous">
 </head>
 <body>
-	{{{body}}}
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-lg-4">
+				<h1 class="text-center">Burger App!</h1>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-lg-4">
+				<img class="img-fluid" src="assets/img/main.jpg" alt="">
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-lg-4 text-center">
+				<h2>Available Burgers</h2>
+				<table class="table">
+					<tr>
+						<td>Elvis Burger</td>
+						<td><button type="button" class="btn btn-primary">Eat</button></td>
+					</tr>
+					<tr>
+						<td>Pickle Rick Burger</td>
+						<td><button type="button" class="btn btn-primary">Eat</button></td>
+					</tr>
+				</table>
+			</div>
+			<div class="col-lg-4 text-center">
+				<h2>Eaten Burgers</h2>
+				<ul id="eaten" class="list-unstyled">
+					<li>Bacon Lettuce Tomato Burger</li>
+					<li>Veggie Burger</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<style>
+		body {
+			background-color: #efd7d7;
+		}
+		li  {
+			font-size: 1rem;
+		}
+		#eaten {
+			text-decoration: line-through;
+		}
+	</style>
 </body>
 </html>
