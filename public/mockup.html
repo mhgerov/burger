@@ -19,7 +19,7 @@
 		</div>
 		<div class="row justify-content-center">
 			<div class="col-lg-4">
-				<img class="img-fluid" src="assets/img/main.jpg" alt="">
+				<img class="img-fluid mx-auto" src="assets/img/main.jpg" alt="">
 			</div>
 		</div>
 		<div class="row justify-content-center">
@@ -27,12 +27,12 @@
 				<h2>Available Burgers</h2>
 				<table class="table">
 					<tr>
-						<td>Elvis Burger</td>
-						<td><button type="button" class="btn btn-primary">Eat</button></td>
+						<td class="text-right">Elvis Burger</td>
+						<td class="text-left"><button type="button" class="btn btn-primary">Eat</button></td>
 					</tr>
 					<tr>
-						<td>Pickle Rick Burger</td>
-						<td><button type="button" class="btn btn-primary">Eat</button></td>
+						<td class="text-right">Pickle Rick Burger</td>
+						<td class="text-left"><button type="button" class="btn btn-primary">Eat</button></td>
 					</tr>
 				</table>
 			</div>
@@ -42,6 +42,17 @@
 					<li>Bacon Lettuce Tomato Burger</li>
 					<li>Veggie Burger</li>
 				</ul>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-lg-4">
+				<form>
+					<div class="form-group">
+						<label for="burger-name">Add a burger</label>
+						<input type="text" class="form-control" id="burger-name" placeholder="Name of burger...">
+					</div>
+					<button type="submit" class="btn btn-primary">Submit</button>
+				</form>
 			</div>
 		</div>
 	</div>
@@ -56,5 +67,6 @@
 			text-decoration: line-through;
 		}
 	</style>
+	<script src="assets/js/main.js"></script>
 </body>
 </html>
