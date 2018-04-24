@@ -2,6 +2,7 @@ $(document).ready(function () {
 	populateBurgers();
 });
 
+//Event handler for eating a burger
 $('#available').on('click','.eat',function() {
 	console.log('Eating id:'+$(this).attr('data-id'));
 	$.post('api/eat',{id:$(this).attr('data-id')}, function() {
@@ -9,6 +10,17 @@ $('#available').on('click','.eat',function() {
 	});
 });
 
+//Event handler for making new burger
+$('#new').submit(function (evt) {
+	evt.preventDefault();
+	var name = $('input:first').val();
+	$.post('api/new',{name:name}, function() {
+		populateBurgers();
+		$('input:first').empty();
+	});
+});
+
+//Refresh lists of available and eaten burgers
 function populateBurgers() {
 	console.log('executing popBurgers...');
 	$('#available').empty();
@@ -18,10 +30,10 @@ function populateBurgers() {
 		console.log(data);
 		for (i in data) {
 			if (data[i].devoured>0) {
-				$('#eaten').append('<li>'+data[i].burger_name+'</li>');
+				$('#eaten').append('<li>'+data[i].burger_name+' Burger</li>');
 			} else {
 				var burgerRow = $('<tr>');
-				burgerRow.append('<td class="text-right">'+data[i].burger_name+'</td>');
+				burgerRow.append('<td class="text-right">'+data[i].burger_name+' Burger</td>');
 				var burgerButton = $('<td>');
 				burgerButton.addClass('text-left');
 				var button = $('<button>');
