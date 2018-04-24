@@ -1,8 +1,13 @@
 var express = require('express');
 var bodyParser = require('body-parser');
+var app = express();
+var PORT = process.env.PORT || 3000;
+var router = require('./controllers/burgers_controller.js');
 
-var burgers = require('./models/burger.js');
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json());
 
-//burgers.viewBurgers(function(res) {console.log(res)});
-//burgers.newBurger('Royale with Cheese',function() {console.log('New burger added!')});
-//burgers.eatBurger('1',function() {console.log('You ate da burger!')});
+app.use('/',router);
+
+app.listen(PORT, () => console.log('Listening on port '+PORT));
+
