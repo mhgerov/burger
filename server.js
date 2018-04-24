@@ -11,6 +11,8 @@ app.set('view engine', 'handlebars');
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json());
 
+app.use(express.static('public'));
+
 app.use('/',router);
 
 app.listen(PORT, () => console.log('Listening on port '+PORT));

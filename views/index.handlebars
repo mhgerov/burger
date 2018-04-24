@@ -1,1 +1,57 @@
-
+<div class="container-fluid">
+	<div class="row justify-content-center">
+		<div class="col-lg-4">
+			<h1 class="text-center">Burger App!</h1>
+		</div>
+	</div>
+	<div class="row justify-content-center">
+		<div class="col-lg-4">
+			<img class="img-fluid mx-auto" src="assets/img/main.jpg" alt="">
+		</div>
+	</div>
+	<div class="row justify-content-center">
+		<div class="col-lg-4 text-center">
+			<h2>Available Burgers</h2>
+			<table class="table">
+				<tr>
+					<td class="text-right">Elvis Burger</td>
+					<td class="text-left"><button type="button" class="btn btn-primary">Eat</button></td>
+				</tr>
+				<tr>
+					<td class="text-right">Pickle Rick Burger</td>
+					<td class="text-left"><button type="button" class="btn btn-primary">Eat</button></td>
+				</tr>
+			</table>
+		</div>
+		<div class="col-lg-4 text-center">
+			<h2>Eaten Burgers</h2>
+			<ul id="eaten" class="list-unstyled">
+				<li>Bacon Lettuce Tomato Burger</li>
+				<li>Veggie Burger</li>
+			</ul>
+		</div>
+	</div>
+	<div class="row justify-content-center">
+		<div class="col-lg-4">
+			<form>
+				<div class="form-group">
+					<label for="burger-name">Add a burger</label>
+					<input type="text" class="form-control" id="burger-name" placeholder="Name of burger...">
+				</div>
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</form>
+		</div>
+	</div>
+</div>
+<style>
+	body {
+		background-color: #efd7d7;
+	}
+	li  {
+		font-size: 1rem;
+	}
+	#eaten {
+		text-decoration: line-through;
+	}
+</style>
+<script src="assets/js/main.js"></script>
